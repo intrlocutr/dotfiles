@@ -1,0 +1,4 @@
+alias doc='cd ~/Documents'
+alias dbx='cd ~/Dropbox'
+alias ondr='cd ~/OneDrive'
+alias dl='cd ~/Downloads'
