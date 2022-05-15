@@ -2,4 +2,4 @@ volnorm = true
 bitrate = 320
 
 [theme]
-playing = "light blue"
+playing_selected = "yellow"
