@@ -63,7 +63,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -224,5 +224,5 @@ bindsym $mod+Control+f exec caja
 bindsym $mod+Control+s exec mate-screenshot
 bindsym $mod+Control+c exec mate-calc
 bindsym $mod+Control+m exec evolution
-bindsym $mod+Control+y exec --no-startup-id alacritty -t Spotify -e ncspot
+bindsym $mod+Control+y exec --no-startup-id i3-sensible-terminal -e ncspot
 bindsym $mod+Control+l exec --no-startup-id xlinks -g
