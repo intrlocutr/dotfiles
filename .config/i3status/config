@@ -15,9 +15,10 @@ general {
 #order += "wireless _first_"
 #order += "ethernet _first_"
 order += "battery all"
-#order += "disk /"
+order += "disk /"
 order += "load"
 #order += "memory"
+order += "volume master"
 order += "tztime local"
 
 wireless _first_ {
@@ -32,6 +33,10 @@ ethernet _first_ {
 
 battery all {
         format = "%status %percentage %remaining"
+	last_full_capacity = true
+	integer_battery_capacity = true
+	status_chr = "⚡CHR"
+	low_threshold = 25
 }
 
 disk "/" {
@@ -49,5 +54,13 @@ memory {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "%a %m/%d/%Y  %H:%M:%S"
+}
+
+volume master {
+        format = "🔊 %volume"
+        format_muted = "🔇 (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
 }
