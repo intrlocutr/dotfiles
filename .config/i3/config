@@ -2,7 +2,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# picom, dex, dunst, unclutter, xss-lock, nm-applet, playerctl, light, feh
+# picom dex dunst unclutter xss-lock nm-applet playerctl light feh
 
 set $mod Mod4
 
