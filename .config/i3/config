@@ -20,6 +20,12 @@ exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 # unclutter to hide cursor
 exec --no-startup-id unclutter
 
+# Disable system bell
+exec --no-startup-id xset b off
+
+# Screen lock in 10 minutes
+exec --no-startup-id xset s 600
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
