@@ -214,15 +214,14 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # Set background image
-exec --no-startup-id feh --bg-scale ~/pics/wallpaper/wallpaper.jpg
+exec --no-startup-id feh --bg-scale ~/.wallpaper.jpg
 
 # Application launchers
-bindsym $mod+Control+b exec firefox
-bindsym $mod+Control+Shift+b exec firefox --private-window
-bindsym $mod+Control+v exec gvim
-bindsym $mod+Control+f exec caja
-bindsym $mod+Control+s exec mate-screenshot
-bindsym $mod+Control+c exec mate-calc
-bindsym $mod+Control+m exec evolution
-bindsym $mod+Control+y exec --no-startup-id i3-sensible-terminal -e ncspot
-bindsym $mod+Control+l exec --no-startup-id xlinks -g
+bindsym Print exec mate-screenshot
+bindsym $mod+Shift+w exec firefox
+bindsym $mod+Shift+p exec firefox --private-window
+bindsym $mod+Shift+f exec caja
+bindsym $mod+Shift+a exec mate-calc
+bindsym $mod+Shift+m exec evolution
+bindsym $mod+Shift+y exec --no-startup-id i3-sensible-terminal -e ncspot
+bindsym $mod+Shift+s exec --no-startup-id xlinks -g
