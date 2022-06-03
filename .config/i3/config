@@ -216,6 +216,9 @@ client.background       #ffffff
 # Set background image
 exec --no-startup-id feh --bg-scale ~/.wallpaper.jpg
 
+# Application rules
+for_window [class="Mate-calc" instance="mate-calc"] floating enable
+
 # Application launchers
 bindsym Print exec mate-screenshot
 bindsym $mod+Shift+w exec firefox
