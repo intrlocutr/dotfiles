@@ -217,7 +217,10 @@ client.background       #ffffff
 exec --no-startup-id feh --bg-scale ~/.wallpaper.jpg
 
 # Application rules
-for_window [class="Mate-calc" instance="mate-calc"] floating enable
+for_window [instance="mate-calc" class="Mate-calc"] floating enable
+for_window [class="KeePassXC"] floating enable
+for_window [instance="Places" class="firefox"] floating enable
+for_window [instance="Browser" class="firefox"] floating enable
 
 # Application launchers
 bindsym Print exec mate-screenshot
