@@ -217,10 +217,12 @@ client.background       #ffffff
 exec --no-startup-id feh --bg-scale ~/.wallpaper.jpg
 
 # Application rules
+# Get instance & class by running xprop
 for_window [instance="mate-calc" class="Mate-calc"] floating enable
 for_window [class="KeePassXC"] floating enable
 for_window [instance="Places" class="firefox"] floating enable
 for_window [instance="Browser" class="firefox"] floating enable
+for_window [instance="pavucontrol"] floating enable
 
 # Application launchers
 bindsym Print exec mate-screenshot
