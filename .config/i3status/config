@@ -32,11 +32,10 @@ ethernet _first_ {
 }
 
 battery all {
-        format = "%status %percentage %remaining"
+        format = "%status %percentage %remaining [%emptytime]"
 	last_full_capacity = true
 	integer_battery_capacity = true
-	status_chr = "⚡ CHR"
-	low_threshold = 25
+	low_threshold = 28
 }
 
 disk "/" {
