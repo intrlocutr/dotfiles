@@ -1,1 +1,2 @@
 alias weather="curl wttr.in"
+alias clipboard="xclip -sel c"
