@@ -1,4 +1,4 @@
-set relativenumber
+set number relativenumber
 syntax on
 
 autocmd InsertEnter,InsertLeave * set cul!  "highlight line when in insert mode
