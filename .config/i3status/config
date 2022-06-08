@@ -33,7 +33,7 @@ ethernet _first_ {
 }
 
 battery all {
-        format = "%status %percentage %remaining [%emptytime]"
+        format = "<span color='#5CFFAF'>%status</span> <b>%percentage</b> %remaining <span color='#878787'>@ %emptytime</span>"
 	last_full_capacity = true
 	integer_battery_capacity = true
 	low_threshold = 28
@@ -54,12 +54,12 @@ memory {
 }
 
 tztime local {
-        format = "%a %m/%d/%Y  %H:%M:%S"
+        format = "<b>%a</b> %b <span color='#69FF69'>%d</span> <span color='#6F6FFF'>%Y</span>  <span weight='bold' color='#6FDEFF'>%H</span>:<span color='#FF6F7C'>%M</span>:<span color='#EBCF47'>%S</span>"
 }
 
 volume master {
-        format = "%devicename: %volume"
-        format_muted = "%devicename: <s>%volume</s>"
+        format = "<span color='#FF004D'>%devicename:</span> <b>%volume</b>"
+        format_muted = "<s>%devicename: %volume</s>"
         device = "default"
         mixer = "Master"
         mixer_idx = 0
