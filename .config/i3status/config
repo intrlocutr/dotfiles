@@ -9,6 +9,7 @@
 general {
         colors = true
         interval = 5
+	markup = pango
 }
 
 #order += "ipv6"
@@ -49,7 +50,7 @@ load {
 memory {
         format = "%used | %available"
         threshold_degraded = "1G"
-        format_degraded = "MEMORY < %available"
+        format_degraded = "MEMORY &lt; %available"
 }
 
 tztime local {
@@ -57,8 +58,8 @@ tztime local {
 }
 
 volume master {
-        format = "🔊 %devicename: %volume"
-        format_muted = "🔇 %devicename: %volume"
+        format = "%devicename: %volume"
+        format_muted = "%devicename: <s>%volume</s>"
         device = "default"
         mixer = "Master"
         mixer_idx = 0
