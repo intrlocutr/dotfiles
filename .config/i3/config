@@ -97,7 +97,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+c focus child
 
 # workspace names
 set $ws1 "1"
@@ -110,12 +110,12 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $ws_file "file"
-set $ws_mail "mail"
-set $ws_media "media"
-set $ws_term "term"
-set $ws_work "work"
-set $ws_www "www"
+set $ws_im "<b>i</b>m"
+set $ws_mail "<b>m</b>ail"
+set $ws_media "<b>p</b>layback"
+set $ws_term "<b>t</b>erm"
+set $ws_work "w<b>o</b>rk"
+set $ws_www "<b>w</b>ww"
 
 # workspace switch
 bindsym $mod+1 workspace number $ws1
@@ -128,13 +128,14 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
-bindsym $mod+i workspace $ws_file; exec --no-startup-id pidof $files || i3-msg "exec $files"
-bindsym $mod+m workspace $ws_mail; exec --no-startup-id pidof $mail || i3-msg "exec $mail"
+bindsym $mod+i workspace $ws_im
+bindsym $mod+m workspace $ws_mail; exec --no-startup-id pidof $mail || (i3-msg "exec $mail" && i3-msg "layout tabbed")
 bindsym $mod+p workspace $ws_media
 bindsym $mod+t workspace $ws_term; exec --no-startup-id pidof $TERMINAL || i3-msg "exec --no-startup-id $TERMINAL"
 bindsym $mod+o workspace $ws_work
 bindsym $mod+w workspace $ws_www
 #; exec --no-startup-id pidof $www || i3-msg "exec $www"
+bindsym $mod+Tab workspace back_and_forth
 
 # workspace move
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -147,12 +148,22 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
-bindsym $mod+Shift+i move container to workspace $ws_file
+bindsym $mod+Shift+i move container to workspace $ws_im
 bindsym $mod+Shift+m move container to workspace $ws_mail
 bindsym $mod+Shift+p move container to workspace $ws_media
 bindsym $mod+Shift+t move container to workspace $ws_term
 bindsym $mod+Shift+o move container to workspace $ws_work
 bindsym $mod+Shift+w move container to workspace $ws_www
+bindsym $mod+Shift+Tab move container to workspace back_and_forth
+
+# workspace navigate
+bindsym $mod+bracketleft workspace prev
+bindsym $mod+bracketright workspace next
+bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New workspace name: '
+
+# workspace move
+bindsym $mod+comma move workspace to output left
+bindsym $mod+period move workspace to output right
 
 # Application rules
 # Get instance & class by running xprop
@@ -165,6 +176,8 @@ for_window [instance="pavucontrol"] floating enable
 for_window [instance="$mail"] move container to workspace $ws_mail
 for_window [title="ncspot"] move container to workspace $ws_media
 for_window [instance="spotify"] move container to workspace $ws_media
+for_window [instance="zoom"] move container to workspace $ws_im
+for_window [instance="discord"] move container to workspace $ws_im
 
 # Application launchers
 bindsym Print exec $screenshot
@@ -172,7 +185,7 @@ bindsym $mod+Shift+b exec $www
 bindsym $mod+Shift+n exec $www --private-window
 bindsym $mod+Shift+f exec $files
 bindsym $mod+Shift+a exec $calc
-bindsym $mod+Shift+y exec --no-startup-id i3-sensible-terminal -t ncspot -e ncspot
+bindsym $mod+Shift+y workspace $ws_media; exec --no-startup-id i3-sensible-terminal -t ncspot -e ncspot
 #bindsym $mod+Shift+n exec --no-startup-id xlinks -g
 
 # Color scheme
