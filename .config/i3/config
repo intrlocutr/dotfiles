@@ -128,13 +128,13 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
-bindsym $mod+i workspace $ws_file; exec --no-startup-id pidof $files || i3-msg exec $files
-bindsym $mod+m workspace $ws_mail; exec --no-startup-id pidof $mail || i3-msg exec $mail
+bindsym $mod+i workspace $ws_file; exec --no-startup-id pidof $files || i3-msg "exec $files"
+bindsym $mod+m workspace $ws_mail; exec --no-startup-id pidof $mail || i3-msg "exec $mail"
 bindsym $mod+p workspace $ws_media
-bindsym $mod+t workspace $ws_term; exec --no-startup-id pidof $TERMINAL || i3-msg exec --no-startup-id $TERMINAL
+bindsym $mod+t workspace $ws_term; exec --no-startup-id pidof $TERMINAL || i3-msg "exec --no-startup-id $TERMINAL"
 bindsym $mod+o workspace $ws_work
 bindsym $mod+w workspace $ws_www
-#; exec --no-startup-id pidof $www || i3-msg exec $www
+#; exec --no-startup-id pidof $www || i3-msg "exec $www"
 
 # workspace move
 bindsym $mod+Shift+1 move container to workspace number $ws1
