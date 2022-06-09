@@ -44,7 +44,7 @@ bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioStop exec --no-startup-id playerctl stop
-bindsym Shift+XF86AudioPlay exec zenity --info --title "Now Playing" --text "$(playerctl metadata title) - $(playerctl metadata artist)"
+bindsym Shift+XF86AudioPlay exec zenity --info --title "Now Playing" --text "<b>$(playerctl metadata title)</b>\n$(playerctl metadata artist)"
 
 # Backlight
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
