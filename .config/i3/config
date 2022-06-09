@@ -95,7 +95,6 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
-
 # focus the child container
 bindsym $mod+c focus child
 
@@ -131,7 +130,8 @@ bindsym $mod+0 workspace number $ws10
 bindsym $mod+i workspace $ws_im
 bindsym $mod+m workspace $ws_mail; exec --no-startup-id pidof $mail || (i3-msg "exec $mail" && i3-msg "layout tabbed")
 bindsym $mod+p workspace $ws_media
-bindsym $mod+t workspace $ws_term; exec --no-startup-id pidof $TERMINAL || i3-msg "exec --no-startup-id $TERMINAL"
+bindsym $mod+t workspace $ws_term
+#; exec --no-startup-id pidof $TERMINAL || i3-msg "exec --no-startup-id $TERMINAL"
 bindsym $mod+o workspace $ws_work
 bindsym $mod+w workspace $ws_www
 #; exec --no-startup-id pidof $www || i3-msg "exec $www"
@@ -159,7 +159,7 @@ bindsym $mod+Shift+Tab move container to workspace back_and_forth
 # workspace navigate
 bindsym $mod+bracketleft workspace prev
 bindsym $mod+bracketright workspace next
-bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New workspace name: '
+bindsym $mod+n exec --no-startup-id i3-input -F 'rename workspace to "%s"' -P 'New workspace name: '
 
 # workspace move
 bindsym $mod+comma move workspace to output left
@@ -173,11 +173,11 @@ for_window [instance="Places" class="firefox"] floating enable
 for_window [instance="Browser" class="firefox"] floating enable
 for_window [instance="pavucontrol"] floating enable
 
-for_window [instance="$mail"] move container to workspace $ws_mail
-for_window [title="ncspot"] move container to workspace $ws_media
+assign [instance="$mail"] $ws_mail
+assign [title="ncspot"] $ws_media
 for_window [instance="spotify"] move container to workspace $ws_media
-for_window [instance="zoom"] move container to workspace $ws_im
-for_window [instance="discord"] move container to workspace $ws_im
+assign [instance="zoom"] $ws_im
+assign [instance="discord"] $ws_im
 
 # Application launchers
 bindsym Print exec $screenshot
