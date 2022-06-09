@@ -4,7 +4,7 @@ set $mod Mod4
 set $refresh_i3status killall -SIGUSR1 i3status
 
 # preferred applications
-# config also relies on: picom dex dunst unclutter xss-lock nm-applet playerctl light feh
+# config also relies on: picom dex dunst unclutter xss-lock nm-applet playerctl light
 set $files caja
 set $mail evolution
 set $www firefox
@@ -203,9 +203,6 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
-
-# Set background image
-exec --no-startup-id feh --bg-scale ~/.wallpaper.jpg
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
