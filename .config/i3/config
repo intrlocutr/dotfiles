@@ -167,6 +167,8 @@ bindsym $mod+n exec --no-startup-id i3-input -F 'rename workspace to "%s"' -P 'N
 # workspace move
 bindsym $mod+comma move workspace to output left
 bindsym $mod+period move workspace to output right
+bindsym $mod+equal move workspace to output up
+bindsym $mod+minus move workspace to output down
 bindsym $mod+apostrophe exec --no-startup-id i3-input -F 'move workspace to output "%s"' -P 'Move workspace to output: '
 
 # Application rules
