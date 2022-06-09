@@ -1,3 +1,7 @@
+alias update-dotfiles='find $DOTFILES_REPO/ -path $DOTFILES_REPO/.git -prune -o -printf "%P\n" | rsync --delete-missing-args --files-from=- ~ $DOTFILES_REPO && cd $DOTFILES_REPO && git status'
 alias weather="curl wttr.in"
 alias clipboard="xclip -sel c"
-alias i3config="$EDITOR ~/.config/i3/config"
+alias i3-config="$EDITOR ~/.config/i3/config"
+alias doc='cd ~/Documents'
+alias ondr='cd ~/onedrive'
+alias dl='cd ~/Downloads'
