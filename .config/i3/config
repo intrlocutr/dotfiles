@@ -1,9 +1,15 @@
 # i3 config file (v4)
 
-# picom dex dunst unclutter xss-lock nm-applet playerctl light feh
-
 set $mod Mod4
 set $refresh_i3status killall -SIGUSR1 i3status
+
+# preferred applications
+# config also relies on: picom dex dunst unclutter xss-lock nm-applet playerctl light feh
+set $files caja
+set $mail evolution
+set $www firefox
+set $calc mate-calc
+set $screenshot mate-screenshot
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -52,9 +58,10 @@ bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
+# program launcher
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+Escape exec --no-startup-id i3-input
 
 # change focus
 bindsym $mod+h focus left
@@ -76,8 +83,8 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+Shift+s layout stacking
+bindsym $mod+s layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -121,12 +128,12 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
-bindsym $mod+i workspace $ws_file
-bindsym $mod+m workspace $ws_mail
+bindsym $mod+i workspace $ws_file; exec --no-startup-id pidof $files || i3-msg exec $files
+bindsym $mod+m workspace $ws_mail; exec --no-startup-id pidof $mail || i3-msg exec $mail
 bindsym $mod+p workspace $ws_media
-bindsym $mod+t workspace $ws_term
+bindsym $mod+t workspace $ws_term; exec --no-startup-id pidof $TERMINAL || i3-msg exec --no-startup-id $TERMINAL
 bindsym $mod+o workspace $ws_work
-bindsym $mod+b workspace $ws_www
+bindsym $mod+w workspace $ws_www; exec --no-startup-id pidof $www || i3-msg exec $www
 
 # workspace move
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -144,28 +151,28 @@ bindsym $mod+Shift+m move container to workspace $ws_mail
 bindsym $mod+Shift+p move container to workspace $ws_media
 bindsym $mod+Shift+t move container to workspace $ws_term
 bindsym $mod+Shift+o move container to workspace $ws_work
-bindsym $mod+Shift+b move container to workspace $ws_www
+bindsym $mod+Shift+w move container to workspace $ws_www
 
 # Application rules
 # Get instance & class by running xprop
-for_window [instance="mate-calc"] floating enable
+for_window [instance="$calc"] floating enable
 for_window [class="KeePassXC"] floating enable
 for_window [instance="Places" class="firefox"] floating enable
 for_window [instance="Browser" class="firefox"] floating enable
 for_window [instance="pavucontrol"] floating enable
 
-for_window [instance="evolution"] move container to workspace $ws_mail
+for_window [instance="$mail"] move container to workspace $ws_mail
 for_window [title="ncspot"] move container to workspace $ws_media
 for_window [instance="spotify"] move container to workspace $ws_media
 
 # Application launchers
-bindsym Print exec mate-screenshot
-bindsym $mod+Shift+w exec firefox
-bindsym $mod+Shift+n exec firefox --private-window
-bindsym $mod+Shift+f exec caja
-bindsym $mod+Shift+a exec mate-calc
+bindsym Print exec $screenshot
+bindsym $mod+Shift+b exec $www
+bindsym $mod+Shift+n exec $www --private-window
+bindsym $mod+Shift+f exec $files
+bindsym $mod+Shift+a exec $calc
 bindsym $mod+Shift+y exec --no-startup-id i3-sensible-terminal -t ncspot -e ncspot
-bindsym $mod+Shift+s exec --no-startup-id xlinks -g
+#bindsym $mod+Shift+n exec --no-startup-id xlinks -g
 
 # Color scheme
 # class                 border  backgr. text    indicator child_border
