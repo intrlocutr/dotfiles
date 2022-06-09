@@ -1,2 +1,3 @@
 alias weather="curl wttr.in"
 alias clipboard="xclip -sel c"
+alias i3config="$EDITOR ~/.config/i3/config"
