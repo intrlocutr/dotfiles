@@ -194,7 +194,7 @@ bindsym $mod+Shift+a exec $calc
 bindsym $mod+Shift+y workspace $ws_media; exec --no-startup-id i3-sensible-terminal -t ncspot -e ncspot
 #bindsym $mod+Shift+n exec --no-startup-id xlinks -g
 
-# Color scheme
+# color scheme
 # class                 border  backgr. text    indicator child_border
 client.focused          #994c4c #772828 #ffffff #f42e2e   #772828
 client.focused_inactive #333333 #6a695f #ffffff #484e50   #6a695f
@@ -203,6 +203,8 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
+
+exec --no-startup-id ~/.fehbg
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
