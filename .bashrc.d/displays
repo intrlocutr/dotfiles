@@ -1,2 +1,0 @@
-alias dp-above="xrandr --output DP-1 --auto --above LVDS-1 && ~/.fehbg"
-alias dp-off="xrandr --output DP-1 --off && ~/.fehbg"

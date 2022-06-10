@@ -1,0 +1,4 @@
+#!/bin/sh
+
+$HOME/.local/lib/out/$1
+$HOME/.fehbg
