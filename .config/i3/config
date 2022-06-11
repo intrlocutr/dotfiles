@@ -4,7 +4,7 @@ set $mod Mod4
 set $refresh_i3status killall -SIGUSR1 i3status
 
 # preferred applications
-# config also relies on: picom dex dunst unclutter xss-lock nm-applet playerctl light lxsession
+# config also relies on: picom dex dunst unclutter xss-lock nm-applet playerctl light lxsession feh
 set $files caja
 set $mail evolution
 set $www firefox
@@ -24,6 +24,7 @@ exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
 exec --no-startup-id lxsession
+exec --no-startup-id ~/.fehbg
 
 # Disable system bell
 exec --no-startup-id xset b off
@@ -204,8 +205,6 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
-
-exec --no-startup-id ~/.fehbg
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
