@@ -2,8 +2,8 @@
 set configversion 2.0
 set newtab about:blank
 
-" Do not sync addon state
-jsb tri.excmds.setpref("services.sync.addons.ignoreUserEnabledChanges", "true")
+" Firefox settings
 
-" Disable service workers
-jsb tri.excmds.setpref("dom.serviceWorkers.enabled", "false")
+jsb tri.excmds.setpref("services.sync.addons.ignoreUserEnabledChanges", "true")  " Do not sync addon state
+jsb tri.excmds.setpref("dom.serviceWorkers.enabled", "false")  " Disable service workers
+jsb tri.excmds.setpref("browser.compactmode.show", "true")  " Enable compact density
