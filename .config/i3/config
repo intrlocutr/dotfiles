@@ -185,8 +185,8 @@ for_window [instance="Places" class="firefox"] floating enable
 for_window [instance="Browser" class="firefox"] floating enable
 for_window [instance="pavucontrol"] floating enable
 
-assign [instance="$mail"] $ws_mail
-assign [title="ncspot"] $ws_media
+#assign [instance="$mail"] $ws_mail
+#assign [title="ncspot"] $ws_media
 for_window [instance="spotify"] move container to workspace $ws_media
 assign [instance="zoom"] $ws_im
 assign [instance="discord"] $ws_im
