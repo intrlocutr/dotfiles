@@ -193,12 +193,13 @@ assign [instance="discord"] $ws_im
 
 # Application launchers
 bindsym Print exec $screenshot
-bindsym $mod+Shift+b exec $www
-bindsym $mod+Shift+n exec $www --private-window
-bindsym $mod+Shift+f exec $files
-bindsym $mod+Shift+a exec $calc
-bindsym $mod+Shift+y workspace $ws_media; exec --no-startup-id i3-sensible-terminal -t ncspot -e ncspot
-#bindsym $mod+Shift+n exec --no-startup-id xlinks -g
+set $launcher Control
+bindsym $mod+$launcher+b exec $www
+bindsym $mod+$launcher+n exec $www --private-window
+bindsym $mod+$launcher+f exec $files
+bindsym $mod+$launcher+a exec $calc
+bindsym $mod+$launcher+y workspace $ws_media; exec --no-startup-id i3-sensible-terminal -t ncspot -e ncspot
+#bindsym $mod+$launcher+n exec --no-startup-id xlinks -g
 
 # color scheme
 # class                 border  backgr. text    indicator child_border
