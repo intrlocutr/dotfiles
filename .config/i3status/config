@@ -54,7 +54,7 @@ memory {
 }
 
 tztime local {
-        format = "<b>%a</b> %b <span color='#69FF69'>%d</span> <span color='#6F6FFF'>%Y</span>  <span weight='bold' color='#6FDEFF'>%H</span>:<span color='#FF6F7C'>%M</span>:<span color='#EBCF47'>%S</span>"
+        format = "<b>%a</b> %b <span color='#69FF69'>%d</span> <span color='#6F6FFF'>%Y</span>  <span weight='bold' color='#6FDEFF'>%H</span>:<span color='#EBCF47'>%M</span>:<span color='#FF6F7C'>%S</span>"
 }
 
 volume master {
