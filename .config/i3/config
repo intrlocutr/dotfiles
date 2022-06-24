@@ -18,7 +18,7 @@ font pango:monospace 8, pango:Noto Sans 8
 
 for_window [all] title_window_icon yes
 
-# Daemons/applets
+# Daemons/applets/whatever
 exec --no-startup-id picom -b
 exec --no-startup-id unclutter
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
@@ -146,7 +146,13 @@ bindsym $mod+w workspace $ws_www
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+semicolon exec --no-startup-id i3-input -F 'workspace "%s"' -P 'Switch to workspace: '
 
-# workspace move
+# output switch
+bindsym $mod+comma focus output left
+bindsym $mod+period focus output right
+bindsym $mod+equal focus output up
+bindsym $mod+minus focus output down
+
+# container move
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
@@ -172,11 +178,11 @@ bindsym $mod+bracketright workspace next
 bindsym $mod+n exec --no-startup-id i3-input -F 'rename workspace to "%s"' -P 'New workspace name: '
 
 # workspace move
-bindsym $mod+comma move workspace to output left
-bindsym $mod+period move workspace to output right
-bindsym $mod+equal move workspace to output up
-bindsym $mod+minus move workspace to output down
-bindsym $mod+apostrophe exec --no-startup-id i3-input -F 'move workspace to output "%s"' -P 'Move workspace to output: '
+bindsym $mod+Shift+comma move workspace to output left
+bindsym $mod+Shift+period move workspace to output right
+bindsym $mod+Shift+equal move workspace to output up
+bindsym $mod+Shift+minus move workspace to output down
+bindsym $mod+Shift+apostrophe exec --no-startup-id i3-input -F 'move workspace to output "%s"' -P 'Move workspace to output: '
 
 # Application rules
 # Get instance & class by running xprop
