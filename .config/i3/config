@@ -148,8 +148,8 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+semicolon exec --no-startup-id i3-input -F 'workspace "%s"' -P 'Switch to workspace: '
 
 # output switch
-bindsym $mod+comma focus output left
-bindsym $mod+period focus output right
+bindsym $mod+bracketleft focus output left
+bindsym $mod+bracketright focus output right
 bindsym $mod+equal focus output up
 bindsym $mod+minus focus output down
 
@@ -174,8 +174,8 @@ bindsym $mod+Shift+Tab move container to workspace back_and_forth
 bindsym $mod+Shift+semicolon exec --no-startup-id i3-input -F 'move container to workspace "%s"' -P 'Move to workspace: '
 
 # workspace navigate
-bindsym $mod+bracketleft workspace prev
-bindsym $mod+bracketright workspace next
+bindsym $mod+comma workspace prev
+bindsym $mod+period workspace next
 bindsym $mod+n exec --no-startup-id i3-input -F 'rename workspace to "%s"' -P 'New workspace name: '
 
 # workspace move
