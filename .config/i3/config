@@ -23,7 +23,7 @@ exec --no-startup-id picom -b
 exec --no-startup-id unclutter
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet  # Handled by dex
 exec --no-startup-id lxsession
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id playerctld daemon
