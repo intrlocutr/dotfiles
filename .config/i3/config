@@ -23,7 +23,7 @@ exec --no-startup-id picom -b
 exec --no-startup-id unclutter
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id dex --autostart --environment i3
-#exec --no-startup-id nm-applet  # Handled by dex
+#exec --no-startup-id nm-applet
 exec --no-startup-id lxsession
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id playerctld daemon
@@ -37,7 +37,9 @@ exec --no-startup-id xset s $lock_seconds $lock_seconds
 exec --no-startup-id xset dpms $lock_seconds $lock_seconds $lock_seconds
 set $lock i3lock -c 000000
 exec --no-startup-id xss-lock --transfer-sleep-lock -- $lock --nofork
-bindsym XF86ScreenSaver exec --no-startup-id $lock
+#bindsym XF86ScreenSaver exec --no-startup-id $lock
+# This will turn off the monitor and subsequently trigger i3lock because of xss-lock
+bindsym XF86ScreenSaver exec --no-startup-id xset dpms force off
 
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
