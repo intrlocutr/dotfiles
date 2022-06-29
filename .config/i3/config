@@ -32,7 +32,7 @@ exec --no-startup-id playerctld daemon
 exec --no-startup-id xset b off
 
 # Screen lock
-exec --no-startup-id xset s 900
+exec --no-startup-id xset s 900 900
 set $lock i3lock -c 000000
 exec --no-startup-id xss-lock --transfer-sleep-lock -- $lock --nofork
 bindsym XF86ScreenSaver exec --no-startup-id $lock
