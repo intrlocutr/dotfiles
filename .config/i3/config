@@ -39,7 +39,7 @@ set $lock i3lock -c 000000
 exec --no-startup-id xss-lock --transfer-sleep-lock -- $lock --nofork
 #bindsym XF86ScreenSaver exec --no-startup-id $lock
 # This will turn off the monitor and subsequently trigger i3lock because of xss-lock
-bindsym XF86ScreenSaver exec --no-startup-id xset dpms force off
+bindsym XF86ScreenSaver exec --no-startup-id sleep 0.3 && xset dpms force off
 
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
