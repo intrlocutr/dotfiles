@@ -2,6 +2,7 @@
 export TERMINAL="/usr/bin/alacritty"
 export WINIT_X11_SCALE_FACTOR=1
 export MOZ_USE_XINPUT2=1
+eval $(ssh-agent)
 
 lock_seconds=900
 xset b off &
@@ -11,7 +12,7 @@ xset dpms $lock_seconds $lock_seconds $lock_seconds &
 picom -b &
 unclutter &
 dunst &
-dex &
+dex -a --environment i3 &
 lxsession &
 ~/.fehbg &
 playerctld daemon &
