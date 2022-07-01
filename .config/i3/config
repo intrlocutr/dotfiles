@@ -18,17 +18,6 @@ font pango:monospace 8, pango:Noto Sans 8
 
 for_window [all] title_window_icon yes
 
-# Compositor
-exec --no-startup-id picom -b
-# Notifications
-exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
-# XDG autostart
-exec --no-startup-id dex --autostart --environment i3
-# PolicyKit handler
-exec --no-startup-id lxsession
-# Set wallpaper
-exec --no-startup-id ~/.fehbg
-
 # Screen lock
 set $lock i3lock -c 000000
 exec --no-startup-id xss-lock --transfer-sleep-lock -- $lock --nofork

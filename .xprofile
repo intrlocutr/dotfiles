@@ -8,5 +8,10 @@ xset b off &
 xset s $lock_seconds $lock_seconds &
 xset dpms $lock_seconds $lock_seconds $lock_seconds &
 
+picom -b &
 unclutter &
+dunst &
+dex &
+lxsession &
+~/.fehbg &
 playerctld daemon &
