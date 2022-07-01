@@ -11,7 +11,6 @@ xset dpms $lock_seconds $lock_seconds $lock_seconds &
 
 picom -b &
 unclutter &
-dunst &
 dex -a --environment i3 &
 lxsession &
 ~/.fehbg &
