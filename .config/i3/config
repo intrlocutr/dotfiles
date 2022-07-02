@@ -4,13 +4,13 @@ set $mod Mod4
 set $refresh_i3status killall -SIGUSR1 i3status
 
 # preferred applications
-# config also uses (Arch package names): picom dex dunst unclutter xss-lock network-manager-applet playerctl light lxsession feh xorg-xset
 set $files caja
 set $mail evolution
 set $www firefox
 set $calc mate-calc
 set $screenshot mate-screenshot
 set $graphical_editor gvim
+set $passwords keepassxc
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -198,6 +198,7 @@ bindsym $mod+$launcher+a exec $calc
 bindsym $mod+$launcher+y workspace $ws_media; exec --no-startup-id spotify
 bindsym $mod+$launcher+u workspace $ws_media; exec --no-startup-id i3-sensible-terminal -t ncspot -e ncspot
 bindsym $mod+$launcher+s exec --no-startup-id xlinks -g
+bindsym $mod+$launcher+p exec $passwords
 
 # color scheme
 # class                 border  backgr. text    indicator child_border
