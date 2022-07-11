@@ -106,6 +106,7 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+set $ws_game "<b>g</b>ame"
 set $ws_im "<b>i</b>m"
 set $ws_mail "<b>m</b>ail"
 set $ws_media "<b>p</b>layback"
@@ -124,6 +125,7 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
+bindsym $mod+g workspace $ws_game
 bindsym $mod+i workspace $ws_im
 bindsym $mod+m workspace $ws_mail; exec --no-startup-id pidof $mail || (i3-msg "exec $mail" && i3-msg "layout tabbed")
 bindsym $mod+p workspace $ws_media
@@ -152,6 +154,7 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+g move container to workspace $ws_game
 bindsym $mod+Shift+i move container to workspace $ws_im
 bindsym $mod+Shift+m move container to workspace $ws_mail
 bindsym $mod+Shift+p move container to workspace $ws_media
