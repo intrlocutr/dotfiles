@@ -73,8 +73,8 @@ bindsym $mod+Shift+BackSpace move scratchpad
 bindsym $mod+BackSpace scratchpad show
 
 # split
-bindsym $mod+g split h
-bindsym $mod+v split v
+bindsym $mod+backslash split h
+bindsym $mod+minus split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -133,13 +133,13 @@ bindsym $mod+o workspace $ws_work
 bindsym $mod+w workspace $ws_www
 #; exec --no-startup-id pidof $www || i3-msg "exec $www"
 bindsym $mod+Tab workspace back_and_forth
-bindsym $mod+semicolon exec --no-startup-id i3-input -F 'workspace "%s"' -P 'Switch to workspace: '
+bindsym $mod+slash exec --no-startup-id i3-input -F 'workspace "%s"' -P 'Switch to workspace: '
 
 # output switch
 bindsym $mod+bracketleft focus output left
 bindsym $mod+bracketright focus output right
-bindsym $mod+equal focus output up
-bindsym $mod+minus focus output down
+bindsym $mod+apostrophe focus output up
+bindsym $mod+semicolon focus output down
 
 # container move
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -159,7 +159,6 @@ bindsym $mod+Shift+t move container to workspace $ws_term
 bindsym $mod+Shift+o move container to workspace $ws_work
 bindsym $mod+Shift+w move container to workspace $ws_www
 bindsym $mod+Shift+Tab move container to workspace back_and_forth
-bindsym $mod+Shift+semicolon exec --no-startup-id i3-input -F 'move container to workspace "%s"' -P 'Move to workspace: '
 
 # workspace navigate
 bindsym $mod+comma workspace prev
@@ -169,9 +168,8 @@ bindsym $mod+n exec --no-startup-id i3-input -F 'rename workspace to "%s"' -P 'N
 # workspace move
 bindsym $mod+Shift+bracketleft move workspace to output left
 bindsym $mod+Shift+bracketright move workspace to output right
-bindsym $mod+Shift+equal move workspace to output up
-bindsym $mod+Shift+minus move workspace to output down
-bindsym $mod+Shift+apostrophe exec --no-startup-id i3-input -F 'move workspace to output "%s"' -P 'Move workspace to output: '
+bindsym $mod+Shift+apostrophe move workspace to output up
+bindsym $mod+Shift+semicolon move workspace to output down
 
 # Application rules
 # Get instance & class by running xprop
