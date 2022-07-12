@@ -182,6 +182,7 @@ for_window [class="KeePassXC"] floating enable
 for_window [instance="Places" class="firefox"] floating enable
 for_window [instance="Browser" class="firefox"] floating enable
 for_window [instance="pavucontrol"] floating enable
+for_window [instance="evolution-alarm-notify"] floating enable
 
 #assign [instance="$mail"] $ws_mail
 #assign [title="ncspot"] $ws_media
