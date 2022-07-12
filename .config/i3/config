@@ -9,7 +9,8 @@ set $mail evolution
 set $www firefox
 set $calc mate-calc
 set $screenshot mate-screenshot
-set $graphical_editor gvim
+set $editor gvim
+set $graphical_editor pluma
 set $passwords keepassxc
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -191,6 +192,7 @@ assign [instance="discord"] $ws_im
 # Application launchers
 bindsym Print exec $screenshot
 set $launcher Control
+bindsym $mod+$launcher+e exec $editor
 bindsym $mod+$launcher+t exec $graphical_editor
 bindsym $mod+$launcher+b exec $www
 bindsym $mod+$launcher+n exec $www --private-window
