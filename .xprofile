@@ -10,7 +10,7 @@ xset s $lock_seconds $lock_seconds &
 xset dpms $lock_seconds $lock_seconds $lock_seconds &
 
 picom -b &
-unclutter &
+unclutter --ignore-scrolling &
 dex -a --environment i3 &
 lxsession &
 ~/.fehbg &
