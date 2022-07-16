@@ -163,6 +163,10 @@ bindsym $mod+Shift+t move container to workspace $ws_term
 bindsym $mod+Shift+o move container to workspace $ws_work
 bindsym $mod+Shift+w move container to workspace $ws_www
 bindsym $mod+Shift+Tab move container to workspace back_and_forth
+bindsym $mod+Shift+bracketleft move container to output left; focus output left
+bindsym $mod+Shift+bracketright move container to output right; focus output right
+bindsym $mod+Shift+apostrophe move container to output up; focus output up
+bindsym $mod+Shift+semicolon move container to output down; focus output down
 
 # workspace navigate
 bindsym $mod+comma workspace prev
@@ -170,10 +174,10 @@ bindsym $mod+period workspace next
 bindsym $mod+n exec --no-startup-id i3-input -F 'rename workspace to "%s"' -P 'New workspace name: '
 
 # workspace move
-bindsym $mod+Shift+bracketleft move workspace to output left
-bindsym $mod+Shift+bracketright move workspace to output right
-bindsym $mod+Shift+apostrophe move workspace to output up
-bindsym $mod+Shift+semicolon move workspace to output down
+bindsym $mod+Control+bracketleft move workspace to output left
+bindsym $mod+Control+bracketright move workspace to output right
+bindsym $mod+Control+apostrophe move workspace to output up
+bindsym $mod+Control+semicolon move workspace to output down
 
 # Application rules
 # Get instance & class by running xprop
