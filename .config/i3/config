@@ -112,8 +112,7 @@ set $ws_im "<b>i</b>m"
 set $ws_mail "<b>m</b>ail"
 set $ws_media "<b>p</b>layback"
 set $ws_term "<b>t</b>erm"
-set $ws_work "w<b>o</b>rk"
-set $ws_www "<b>w</b>ww"
+set $ws_work "<b>w</b>ork"
 
 # workspace switch
 bindsym $mod+1 workspace number $ws1
@@ -132,8 +131,7 @@ bindsym $mod+m workspace $ws_mail; exec --no-startup-id pidof $mail || (i3-msg "
 bindsym $mod+p workspace $ws_media
 bindsym $mod+t workspace $ws_term
 #; exec --no-startup-id pidof $TERMINAL || i3-msg "exec --no-startup-id $TERMINAL"
-bindsym $mod+o workspace $ws_work
-bindsym $mod+w workspace $ws_www
+bindsym $mod+w workspace $ws_work
 #; exec --no-startup-id pidof $www || i3-msg "exec $www"
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+slash exec --no-startup-id i3-input -F 'workspace "%s"' -P 'Switch to workspace: '
@@ -160,8 +158,7 @@ bindsym $mod+Shift+i move container to workspace $ws_im
 bindsym $mod+Shift+m move container to workspace $ws_mail
 bindsym $mod+Shift+p move container to workspace $ws_media
 bindsym $mod+Shift+t move container to workspace $ws_term
-bindsym $mod+Shift+o move container to workspace $ws_work
-bindsym $mod+Shift+w move container to workspace $ws_www
+bindsym $mod+Shift+w move container to workspace $ws_work
 bindsym $mod+Shift+Tab move container to workspace back_and_forth
 bindsym $mod+Shift+bracketleft move container to output left; focus output left
 bindsym $mod+Shift+bracketright move container to output right; focus output right
