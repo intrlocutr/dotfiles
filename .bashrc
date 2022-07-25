@@ -17,7 +17,7 @@ then
 fi
 export PATH
 
-export DOTFILES_REPO="$HOME/programming/dotfiles"
+export DOTFILES_REPO="$HOME/projects/dotfiles"
 export EDITOR="/usr/bin/vim"
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
